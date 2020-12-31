@@ -1,7 +1,8 @@
-n = 3
+n = int(input())
 # word = ['pretend','present','previous','prefix']
 # word = ['find', 'the', 'shortest', 'unique', 'prefix']
-word = ['A', 'AA', 'AAA']
+# word = ['A', 'AA', 'AAA']
+word = [input() for i in range(n)]
 
 for i in range(n):
     # count = 0
