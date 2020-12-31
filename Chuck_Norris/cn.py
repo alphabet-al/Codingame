@@ -1,9 +1,8 @@
 import re
 
-message = '%'
+message = input()
 
 res = ''.join(format(i, 'b').zfill(7) for i in bytearray(message, encoding ='utf-8'))
-
 lst = re.split(r'(?<=0)(?=1)|(?<=1)(?=0)', res)
 final_lst = []
 
