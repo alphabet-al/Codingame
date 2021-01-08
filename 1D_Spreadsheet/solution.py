@@ -29,9 +29,10 @@ def do_operation(idx, grp):
 
 
 if __name__ == "__main__":
-    n = 2 # int(input())
-    ipt = ['ADD $1 20', 'VALUE 32 _']
-    lst = [ipt[i].split() for i in range(n)]
+    n = int(input())
+    lst = [input().split() for i in range(n)]
+    # ipt = ['VALUE 3 _','ADD $0 4']
+    # lst = [ipt[i].split() for i in range(n)]
     
 
     while True:
@@ -50,4 +51,3 @@ if __name__ == "__main__":
 
     for i in lst:
         print(i)
-        
