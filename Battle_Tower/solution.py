@@ -9,10 +9,12 @@ def cord(graph, exit_list, edges):
                 inv_edge.append(i)
 
         for i in inv_edge:
+            # print(i)
             for j in i:
                 temp.append(j)
-        
+      
         if len(temp) != 0:
+            # print(inv_edge)
             mci = max(temp, key = temp.count)
             exit_list.append(mci)
         else:
@@ -31,8 +33,18 @@ def de_exit(graph):
         elif len(v) == 1:
             if v[0] not in exit_list:
                 exit_list.append(v[0])
+                
 
     return exit_list
+
+def find_exit_per(edges, exit_list):
+    count = 0
+    for i in edges:
+            if i[0] in exit_list and i[1] in exit_list:
+                print(i)
+                count += 1
+    print(count)
+         
 
 def find_edges(graph):
     edges = []
@@ -47,6 +59,7 @@ def calc(graph, edges):
 
     exit_list = de_exit(graph)
     exit_list = cord(graph, exit_list, edges)
+    # find_exit_per(edges, exit_list)
 
     return len(exit_list)
 
